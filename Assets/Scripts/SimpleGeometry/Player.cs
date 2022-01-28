@@ -6,9 +6,13 @@ namespace SimpleGeometry
 {
     public class Player : MonoBehaviour
     {
+        [SerializeField] private int _maxEnergy;
+        
         private Figure _figure;
         private int _moves;
-
+        private int _energy;
+        
+        
         public Figure Figure => _figure;
 
         [SerializeField] private bool _isTriangleExtensionOn;
@@ -29,6 +33,17 @@ namespace SimpleGeometry
             }
         }
 
+        public int Energy {
+            get => _energy;
+            set
+            {
+                _energy = value;
+                OnChange?.Invoke();
+            }
+        }
+
+        public int MaxEnergy => _maxEnergy;
+        
         public static Player Instance;
 
         public event Action OnChange;

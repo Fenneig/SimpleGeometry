@@ -11,6 +11,7 @@ namespace SimpleGeometry.TriangleExtension
 
         public override void OnClick()
         {
+            if (Player.Instance.Energy <= 0) return;
             Player.Instance.Capture(this);
             Player.Instance.OnFigureAction += ReduceTargetSize;
         }
@@ -18,7 +19,8 @@ namespace SimpleGeometry.TriangleExtension
         private void ReduceTargetSize(Figure target)
         {
             target.Size--;
-            target.Resize();
+            target.Resize();         
+            Player.Instance.Energy--;
         }
     }
 }

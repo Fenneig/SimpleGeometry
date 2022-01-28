@@ -1360,6 +1360,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5813358331599947270, guid: 994c62ceaa9ba384b8a1f6b3c16ef7b6,
         type: 3}
+      propertyPath: _maxEnergy
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813358331599947270, guid: 994c62ceaa9ba384b8a1f6b3c16ef7b6,
+        type: 3}
       propertyPath: _isTriangleExtensionOn
       value: 0
       objectReference: {fileID: 0}
