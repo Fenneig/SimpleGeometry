@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
-using SimpleGeometry;
+﻿using UnityEditor;
+using SimpleGeometry.GameObjectComponents;
 
 [CustomEditor(typeof(Figure), true)]
 [CanEditMultipleObjects]
@@ -10,6 +9,6 @@ public class FigureEditor : Editor
     {
         base.OnInspectorGUI();
         var figure = (Figure) target;
-        figure.transform.localScale = Vector3.one * figure.Size;
+        figure.Resize();
     }
 }
