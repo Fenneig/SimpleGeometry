@@ -24,6 +24,5 @@ namespace SimpleGeometry.GameObjectComponents
         {
             transform.localScale = Vector3.one * _size;
         }
-        
     }
 }
